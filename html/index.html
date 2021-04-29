@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio semana 11</title>
+    <link rel="stylesheet" href="..\Styles\index.css">
+</head>
+<body>
+    <div id="firstBlock">
+        <div id="title1">Publica aqui</div>
+            <div><input type="text" placeholder="Escribe tu nombre de usuario" id="userName"></div>
+            <textarea rows="1" cols="7" id="publicacion" placeholder="Escribe tu publicacion" ></textarea>
+            <div><button id="publicarBtn">Publicar</button></div>
+    </div>  
+
+    <div id="secondBlock">Feed News</div>
+    <div>
+        <!-- Vacio, se llena con JS-->
+    </div>
+   
+
+
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD6b4f5cljt5HiWzMoIjJmmYJGo4E-w5e0",
+    authDomain: "ecosistemas-s11.firebaseapp.com",
+    projectId: "ecosistemas-s11",
+    storageBucket: "ecosistemas-s11.appspot.com",
+    messagingSenderId: "966022717148",
+    appId: "1:966022717148:web:5613961c1f738fe0fc5e19"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</html>
