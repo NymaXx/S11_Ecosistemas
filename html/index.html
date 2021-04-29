@@ -10,9 +10,9 @@
 <body>
     <div id="firstBlock">
         <div id="title1">Publica aqui</div>
-            <div><input type="text" placeholder="Escribe tu nombre de usuario" id="userName"></div>
+            <input type="text" placeholder="Escribe tu nombre de usuario" id="userName">
             <textarea rows="1" cols="7" id="publicacion" placeholder="Escribe tu publicacion" ></textarea>
-            <div><button id="publicarBtn">Publicar</button></div>
+            <button id="publicarBtn">Publicar</button>
     </div>  
 
     <div id="secondBlock">Feed News</div>
@@ -24,11 +24,11 @@
 
 </body>
 
+
+</html>
+
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 
 <script>
   // Your web app's Firebase configuration
@@ -43,4 +43,4 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
-</html>
+<script src="../js/index.js"></script>
