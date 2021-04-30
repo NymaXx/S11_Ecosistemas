@@ -53,6 +53,19 @@ class Publicacion{
         component.appendChild(respContainer);
         component.appendChild(anadirRespContainer);
 
+        const comentarioNuevo = document.querySelector('textRespuesta');
+        buttonResp.addEventListener('click', () => {
+            let db = firebase.database();
+
+            let comment = {
+                text: comentarioNuevo.val(),
+            }
+            
+            db.ref('publish/-MZYIBP4W6dngZa_59EA/comments').push().set(comment);
+            console.log(comentarioNuevo.value);
+
+        });
+
 
         return component;
     }

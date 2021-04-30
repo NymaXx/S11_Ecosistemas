@@ -10,6 +10,8 @@ let comentarios='';
 
 //hacer una publicacion
 const publicar = () => {
+    let referencia = db.ref('publish').push();
+
     if(userName.value === '' || publicacion.value === ''){
         alert("Llena todos los campos para poder publicar");
         /*console.log('pilas pacho');*/
@@ -21,14 +23,13 @@ const publicar = () => {
     }
     
     let publik = {
+        id: referencia.key,
         username: userName.value,
         publicacion: publicacion.value,
         comments,
     };
 
-    
-
-    db.ref('publish').push().set(publik);
+    referencia.set(publik);
 
     userName.value = '';
     publicacion.value = '';
@@ -39,6 +40,7 @@ const publicar = () => {
 //lectura
 const MostrarPublicaciones = () => {
     db.ref('publish').on('value',  (data) => {
+        publiContainer.innerHTML = '';
         data.forEach(
             publicacion => {
                 let valor =publicacion.val();
