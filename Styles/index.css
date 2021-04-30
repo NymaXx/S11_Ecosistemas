@@ -53,3 +53,12 @@
     /*margin-left: 40%;*/
 }
 
+#commentGlobe{
+    display: flex;
+    flex-direction: column;
+}
+
+.respGnralContainer{
+    margin-top: 20px;
+}
+
