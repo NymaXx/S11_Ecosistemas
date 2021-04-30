@@ -60,5 +60,55 @@
 
 .respGnralContainer{
     margin-top: 20px;
+    border-radius: 10px;
 }
+
+.userNamePub{
+    margin-left: 75%;
+    font-size: 13px;
+
+}
+
+.containerFeedPub{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    background-color: rgb(199, 199, 199);
+}
+
+.respGnralContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    width: 400px;
+    background-color: rgb(238, 238, 238);
+}
+
+.publitext{
+    text-align: center;
+}
+
+.comentContainer{
+    background-color:  rgb(212, 212, 212);
+    margin-bottom: 5px;
+}
+
+.InputAndBtnResp{
+    display: flex;
+    
+}
+
+.textRespuesta{
+    width: 80%;
+}
+
+.responderBtn{
+    background-color: darkcyan;
+    width: 20%;
+    color: white;
+}
+
+
 
