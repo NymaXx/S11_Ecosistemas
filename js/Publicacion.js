@@ -28,7 +28,7 @@ class Publicacion{
         let respContainer = document.createElement('div');
         respContainer.className = 'comentContainer';
         respContainer.innerHTML = (
-            '<div>' + this.publik.comentario + '</div>'
+            this.publik.comentario  
         );
 
         let anadirRespContainer = document.createElement('div');
@@ -52,6 +52,8 @@ class Publicacion{
         component.appendChild(publicContainer);
         component.appendChild(respContainer);
         component.appendChild(anadirRespContainer);
+
+
         return component;
     }
 }

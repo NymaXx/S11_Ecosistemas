@@ -93,6 +93,7 @@
 .comentContainer{
     background-color:  rgb(212, 212, 212);
     margin-bottom: 5px;
+    padding: 5px;
 }
 
 .InputAndBtnResp{

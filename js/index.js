@@ -2,7 +2,6 @@ const db = firebase.database();
 const publicarBtn = document.getElementById('publicarBtn');
 const userName = document.getElementById('userName');
 const publicacion = document.getElementById('publicacion');
-const respuesta = document.getElementById('respuesta');
 const publiContainer = document.getElementById('publiContainer');
 
 let comentarios='';
@@ -16,12 +15,18 @@ const publicar = () => {
         /*console.log('pilas pacho');*/
         return; 
     }
+
+    let comments = {
+        comentario: comentarios,
+    }
     
     let publik = {
         username: userName.value,
         publicacion: publicacion.value,
-        comentario: comentarios,
+        comments,
     };
+
+    
 
     db.ref('publish').push().set(publik);
 
@@ -32,7 +37,7 @@ const publicar = () => {
 
 
 //lectura
-const leer = () => {
+const MostrarPublicaciones = () => {
     db.ref('publish').on('value',  (data) => {
         data.forEach(
             publicacion => {
@@ -48,9 +53,17 @@ const leer = () => {
 }
 
 
-leer();
+//comentar
+
+const comentar = () => {
+
+}
 
 
 
-//acciones de los botones
+
+
+
+//acciones 
 publicarBtn.addEventListener('click', publicar);
+MostrarPublicaciones();
