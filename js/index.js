@@ -4,7 +4,7 @@ const userName = document.getElementById('userName');
 const publicacion = document.getElementById('publicacion');
 const publiContainer = document.getElementById('publiContainer');
 
-let comentarios='';
+
 
 
 
@@ -18,15 +18,13 @@ const publicar = () => {
         return; 
     }
 
-    let comments = {
-        comentario: comentarios,
-    }
+  
     
     let publik = {
         id: referencia.key,
         username: userName.value,
         publicacion: publicacion.value,
-        comments,
+
     };
 
     referencia.set(publik);
